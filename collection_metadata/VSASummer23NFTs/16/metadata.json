@@ -3,7 +3,7 @@
     "description": "A digital sports trading card representing Christian Hoey from Villanova Soccer Academy. This card provides a dynamic snapshot of Christian Hoey's performance in various categories.",
     "attributes": [
         {
-            "trait_type": "Attacking",
+            "trait_type": "Goalkeeping",
             "value": 97,
             "max_value": 100
         },

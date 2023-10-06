@@ -3,7 +3,7 @@
     "description": "A digital sports trading card representing Anthony Bonilla from Villanova Soccer Academy. This card provides a dynamic snapshot of Anthony Bonilla's performance in various categories.",
     "attributes": [
         {
-            "trait_type": "Attacking",
+            "trait_type": "Goalkeeping",
             "value": 81,
             "max_value": 100
         },
