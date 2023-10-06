@@ -6,21 +6,46 @@ import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Pausable.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Burnable.sol";
+import "@openzeppelin/contracts/utils/Strings.sol";
 
 /// @custom:security-contact bugs@athleti.fi
-contract VSASummer23NFT is ERC721, ERC721Enumerable, ERC721Pausable, Ownable, ERC721Burnable {
+// deployed contract address: Goerli - 0x285da1ad2f0dd1f12e6b90b6201ac50cb25091e6 / 0xc691aaf5e8dcca5bf8c9039d900e40dfac79f742d4c4e796d4f9a9dcdcc43f68
+contract VSASummer23NFTTEST7 is ERC721, ERC721Enumerable, ERC721Pausable, Ownable, ERC721Burnable {
     uint256 private _nextTokenId;
 
     constructor(address initialOwner)
-        ERC721("VSASummer23NFT", "VSA23")
+        ERC721("VSASummer23NFTTest7", "VSA23")
         Ownable(initialOwner)
     {
         _nextTokenId = 1;
     }
 
     function _baseURI() internal pure override returns (string memory) {
-        return "https://scarlet-electric-boar-374.mypinata.cloud/ipfs/Qmav4zfz2FhK4EXjGx635raMjdPtkRyKmTb4qFt6yFGZqJ/";
+        // return "https://scarlet-electric-boar-374.mypinata.cloud/ipfs/Qmav4zfz2FhK4EXjGx635raMjdPtkRyKmTb4qFt6yFGZqJ/";
+        // return "https://scarlet-electric-boar-374.mypinata.cloud/ipfs/QmQ4bkp7R53DEeWXE8S89v4M81R7QHBdmnDtJSbwSUgBNR/";
+        return "https://scarlet-electric-boar-374.mypinata.cloud/ipfs/Qma5dorD6wctRKDapKniK3UCBi6kFmB5Aevu9h4LNkx5aG/";
+        // return "https://scarlet-electric-boar-374.mypinata.cloud/ipfs/Qmav4zfz2FhK4EXjGx635raMjdPtkRyKmTb4qFt6yFGZqJ//metadata.json";
+
     }
+
+
+    function tokenURI(uint256 tokenId) public view virtual override returns (string memory) {
+        address tokenOwner = address(0);
+        bool tokenExists = true;
+        
+        // Try to get the owner of the token
+        try this.ownerOf(tokenId) returns (address result) {
+            tokenOwner = result;
+        } catch {
+            tokenExists = false;
+        }
+
+        require(tokenExists, "ERC721Metadata: URI query for nonexistent token");
+
+        string memory base = _baseURI();
+        return string(abi.encodePacked(base, Strings.toString(tokenId), "/metadata.json"));
+    }
+
 
     function pause() public onlyOwner {
         _pause();
