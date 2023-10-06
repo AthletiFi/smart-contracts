@@ -1,0 +1,57 @@
+{
+    "name": "Villanova Soccer Academy - Stebi Vidal",
+    "description": "A digital sports trading card representing Stebi Vidal from Villanova Soccer Academy. This card provides a dynamic snapshot of Stebi Vidal's performance in various categories.",
+    "attributes": [
+        {
+            "trait_type": "Attacking",
+            "value": 96,
+            "max_value": 100
+        },
+        {
+            "trait_type": "Skill",
+            "value": 95,
+            "max_value": 100
+        },
+        {
+            "trait_type": "Physical",
+            "value": 98,
+            "max_value": 100
+        },
+        {
+            "trait_type": "Mentality",
+            "value": 91,
+            "max_value": 100
+        },
+        {
+            "trait_type": "Defending",
+            "value": 90,
+            "max_value": 100
+        },
+        {
+            "trait_type": "Fair Play",
+            "value": 87,
+            "max_value": 100
+        },
+        {
+            "trait_type": "Overall Score",
+            "value": 93,
+            "max_value": 100
+        },
+        {
+            "trait_type": "Club",
+            "value": "Villanova Soccer Academy"
+        },
+        {
+            "trait_type": "Team",
+            "value": "2009s"
+        },
+        {
+            "trait_type": "Player Number",
+            "value": 21
+        }
+    ],
+    "external_url": "https://athleti.fi/player/20",
+    "edition": "3D Gold",
+    "collection": "Villanova Soccer Academy - Summer 2023 Collection",
+    "animation_url": "./Stebi-Vidal.mp4"
+}

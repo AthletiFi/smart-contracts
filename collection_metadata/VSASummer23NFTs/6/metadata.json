@@ -1,0 +1,57 @@
+{
+    "name": "Villanova Soccer Academy - Alesandro C\u00e1rdenas",
+    "description": "A digital sports trading card representing Alesandro C\u00e1rdenas from Villanova Soccer Academy. This card provides a dynamic snapshot of Alesandro C\u00e1rdenas's performance in various categories.",
+    "attributes": [
+        {
+            "trait_type": "Goalkeeping",
+            "value": 90,
+            "max_value": 100
+        },
+        {
+            "trait_type": "Skill",
+            "value": 87,
+            "max_value": 100
+        },
+        {
+            "trait_type": "Physical",
+            "value": 95,
+            "max_value": 100
+        },
+        {
+            "trait_type": "Mentality",
+            "value": 87,
+            "max_value": 100
+        },
+        {
+            "trait_type": "Defending",
+            "value": 93,
+            "max_value": 100
+        },
+        {
+            "trait_type": "Fair Play",
+            "value": 80,
+            "max_value": 100
+        },
+        {
+            "trait_type": "Overall Score",
+            "value": 89,
+            "max_value": 100
+        },
+        {
+            "trait_type": "Club",
+            "value": "Villanova Soccer Academy"
+        },
+        {
+            "trait_type": "Team",
+            "value": "2009s"
+        },
+        {
+            "trait_type": "Player Number",
+            "value": 1
+        }
+    ],
+    "external_url": "https://athleti.fi/player/6",
+    "edition": "3D Gold",
+    "collection": "Villanova Soccer Academy - Summer 2023 Collection",
+    "animation_url": "./Alesandro-C\u00e1rdenas.mp4"
+}

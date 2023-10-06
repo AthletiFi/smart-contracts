@@ -1,0 +1,57 @@
+{
+    "name": "Villanova Soccer Academy - Nacho Aliaga",
+    "description": "A digital sports trading card representing Nacho Aliaga from Villanova Soccer Academy. This card provides a dynamic snapshot of Nacho Aliaga's performance in various categories.",
+    "attributes": [
+        {
+            "trait_type": "Attacking",
+            "value": 94,
+            "max_value": 100
+        },
+        {
+            "trait_type": "Skill",
+            "value": 98,
+            "max_value": 100
+        },
+        {
+            "trait_type": "Physical",
+            "value": 92,
+            "max_value": 100
+        },
+        {
+            "trait_type": "Mentality",
+            "value": 97,
+            "max_value": 100
+        },
+        {
+            "trait_type": "Defending",
+            "value": 94,
+            "max_value": 100
+        },
+        {
+            "trait_type": "Fair Play",
+            "value": 83,
+            "max_value": 100
+        },
+        {
+            "trait_type": "Overall Score",
+            "value": 93,
+            "max_value": 100
+        },
+        {
+            "trait_type": "Club",
+            "value": "Villanova Soccer Academy"
+        },
+        {
+            "trait_type": "Team",
+            "value": "2011s"
+        },
+        {
+            "trait_type": "Player Number",
+            "value": 13
+        }
+    ],
+    "external_url": "https://athleti.fi/player/19",
+    "edition": "3D Gold",
+    "collection": "Villanova Soccer Academy - Summer 2023 Collection",
+    "animation_url": "./Nacho-Aliaga.mp4"
+}
