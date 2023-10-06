@@ -1,45 +1,57 @@
 {
     "name": "Villanova Soccer Academy - Nacho Aliaga",
     "description": "A digital sports trading card representing Nacho Aliaga from Villanova Soccer Academy. This card provides a dynamic snapshot of Nacho Aliaga's performance in various categories.",
-    "animation": "./Nacho-Aliaga.mp4",
     "attributes": [
         {
             "trait_type": "Attacking",
-            "value": "[Attacking Score]",
+            "value": 94,
             "max_value": 100
         },
         {
             "trait_type": "Skill",
-            "value": "[Skill Score]",
+            "value": 98,
             "max_value": 100
         },
         {
             "trait_type": "Physical",
-            "value": "[Physical Score]",
+            "value": 92,
             "max_value": 100
         },
         {
             "trait_type": "Mentality",
-            "value": "[Mentality Score]",
+            "value": 97,
             "max_value": 100
         },
         {
             "trait_type": "Defending",
-            "value": "[Defending Score]",
+            "value": 94,
             "max_value": 100
         },
         {
             "trait_type": "Fair Play",
-            "value": "[Fair Play Score]",
+            "value": 83,
             "max_value": 100
         },
         {
             "trait_type": "Overall Score",
-            "value": "[Overall Score]",
+            "value": 93,
             "max_value": 100
+        },
+        {
+            "trait_type": "Club",
+            "value": "Villanova Soccer Academy"
+        },
+        {
+            "trait_type": "Team",
+            "value": "2011s"
+        },
+        {
+            "trait_type": "Player Number",
+            "value": 13
         }
     ],
-    "external_url": "https://athletifi.com/player/19",
+    "external_url": "https://athleti.fi/player/19",
     "edition": "3D Gold",
-    "collection": "Villanova Soccer Academy - Summer 2023 Collection"
+    "collection": "Villanova Soccer Academy - Summer 2023 Collection",
+    "animation_url": "./Nacho-Aliaga.mp4"
 }
