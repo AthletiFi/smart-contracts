@@ -1,0 +1,45 @@
+{
+    "name": "Villanova Soccer Academy - Jose Hernandez",
+    "description": "A digital sports trading card representing Jose Hernandez from Villanova Soccer Academy. This card provides a dynamic snapshot of Jose Hernandez's performance in various categories.",
+    "animation": "./Jose-Hernandez.mp4",
+    "attributes": [
+        {
+            "trait_type": "Attacking",
+            "value": "[Attacking Score]",
+            "max_value": 100
+        },
+        {
+            "trait_type": "Skill",
+            "value": "[Skill Score]",
+            "max_value": 100
+        },
+        {
+            "trait_type": "Physical",
+            "value": "[Physical Score]",
+            "max_value": 100
+        },
+        {
+            "trait_type": "Mentality",
+            "value": "[Mentality Score]",
+            "max_value": 100
+        },
+        {
+            "trait_type": "Defending",
+            "value": "[Defending Score]",
+            "max_value": 100
+        },
+        {
+            "trait_type": "Fair Play",
+            "value": "[Fair Play Score]",
+            "max_value": 100
+        },
+        {
+            "trait_type": "Overall Score",
+            "value": "[Overall Score]",
+            "max_value": 100
+        }
+    ],
+    "external_url": "https://athletifi.com/player/18",
+    "edition": "3D Gold",
+    "collection": "Villanova Soccer Academy - Summer 2023 Collection"
+}

@@ -1,0 +1,45 @@
+{
+    "name": "Villanova Soccer Academy - Alesandro Ca\u0301rdenas",
+    "description": "A digital sports trading card representing Alesandro Ca\u0301rdenas from Villanova Soccer Academy. This card provides a dynamic snapshot of Alesandro Ca\u0301rdenas's performance in various categories.",
+    "animation": "./Alesandro-Ca\u0301rdenas.mp4",
+    "attributes": [
+        {
+            "trait_type": "Attacking",
+            "value": "[Attacking Score]",
+            "max_value": 100
+        },
+        {
+            "trait_type": "Skill",
+            "value": "[Skill Score]",
+            "max_value": 100
+        },
+        {
+            "trait_type": "Physical",
+            "value": "[Physical Score]",
+            "max_value": 100
+        },
+        {
+            "trait_type": "Mentality",
+            "value": "[Mentality Score]",
+            "max_value": 100
+        },
+        {
+            "trait_type": "Defending",
+            "value": "[Defending Score]",
+            "max_value": 100
+        },
+        {
+            "trait_type": "Fair Play",
+            "value": "[Fair Play Score]",
+            "max_value": 100
+        },
+        {
+            "trait_type": "Overall Score",
+            "value": "[Overall Score]",
+            "max_value": 100
+        }
+    ],
+    "external_url": "https://athletifi.com/player/6",
+    "edition": "3D Gold",
+    "collection": "Villanova Soccer Academy - Summer 2023 Collection"
+}
