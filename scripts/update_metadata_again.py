@@ -82,5 +82,5 @@ for folder in os.listdir(base_dir):
     
     # Save the modified data back to metadata.json
     with open(metadata_file_path, "w") as file:
-    json.dump(modified_data, file, indent=4)
+        json.dump(modified_data, file, indent=4)
 
