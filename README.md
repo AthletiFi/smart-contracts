@@ -31,21 +31,50 @@ This repository contains the smart contracts for AthletiFi, developed on the Pol
    npx hardhat test
    ```
 ## Deployment
-- start local node `npx hardhat node`
-- run deploy script `npx hardhat run --network localhost scripts/deploy.js`
-- connect to remix `remixd -s . --remix-ide https://remix.ethereum.org`
--  check the "use hardhat" checkbox or whatever its called and press the compile button
-- copy your wallet address then enter it for the deploy button and click deploy
-- look at the  all the buttons for the contract in the deployed contracts section and find the one for mint and enter an address and mint!
+
+### 1. Start a Local Node
+Initiate a local Ethereum node:
+```
+npx hardhat node
+```
+
+### 2. Connect to Remix IDE
+
+Establish a connection between your local file system and the Remix IDE:
+```
+remixd -s . --remix-ide https://remix.ethereum.org
+```
+
+### 3. Set Compiler Version in Remix
+- Open [Remix IDE](https://remix.ethereum.org/#lang=en&optimize=false&runs=200&evmVersion=null&version=soljson-v0.8.20+commit.a1b79de6.js) in your browser. 
+- Navigate to the "Solidity Compiler" tab.
+- Ensure the compiler version selected matches the version specified in your smart contract (e.g., `pragma solidity ^0.8.20;`).
+
+### 4. Compile the Smart Contract in Remix
+- Ensure the "Enable Hardhat Compilation" option is checked.
+- Click the "Compile" button.
+
+### 5. Set Up MetaMask
+- Ensure MetaMask is connected and set to the correct network (e.g., Goerli testnet).
+
+### 6. Deploy the Smart Contract in Remix
+- Switch to the "Deploy & Run Transactions" tab.
+- Ensure you've selected the correct network.
+- Copy your Ethereum wallet address.
+- In the "Deploy" section, input your wallet address in the appropriate field.
+- Click the "Deploy" button.
+
+### 7. Mint Tokens in Remix
+- Once the contract is deployed, navigate to the "Deployed Contracts" section.
+- Locate the `mint` function.
+- Input the desired Ethereum address where you want the token to be minted.
+- Execute the `mint` function.
+
+### 8. Verify on OpenSea
+After minting, check the NFT on OpenSea's testnet to ensure the metadata, image, and other assets display correctly.
 
 ## Contributing
 
 If you wish to contribute to the development of these smart contracts, please submit a pull request or open an issue to 
 discuss the changes.
 
-
-# TODO:
-
-1. re-upload all videos the Pinata in new directory
-2. replace "animation_url" with new path to videos on ipfs
-3. redeploy smart contract (look at deployment instructions.)
