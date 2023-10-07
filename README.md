@@ -11,17 +11,20 @@ This repository contains the smart contracts for AthletiFi, developed on the Pol
 ## Setup and Installation
 
 1. **Clone the Repository**:
+
    ```bash
    git clone https://github.com/AthletiFi/smart-contracts.git
    cd smart-contracts
    ```
 
 2. **Install Dependencies**:
+
    ```bash
    npm install
    ```
 
 3. **Compile Contracts**:
+
    ```bash
    npx hardhat compile
    ```
@@ -46,7 +49,7 @@ npx hardhat test
 
 Establish a connection between your local file system and the Remix IDE:
 
-```
+```bash
 remixd -s . --remix-ide https://remix.ethereum.org
 ```
 
@@ -88,4 +91,3 @@ After minting, check the NFT on OpenSea's testnet to ensure the metadata, image,
 
 If you wish to contribute to the development of these smart contracts, please submit a pull request or open an issue to 
 discuss the changes.
-
