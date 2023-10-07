@@ -66,6 +66,11 @@ base_dir = "/Users/qisforq/Documents/Code/athletifi-code/smart-contracts/collect
 
 for folder in os.listdir(base_dir):
     folder_path = os.path.join(base_dir, folder)
+
+    # Skip if not a directory or is a .DS_Store file
+    if not os.path.isdir(folder_path) or folder == ".DS_Store":
+        continue
+
     metadata_file_path = os.path.join(folder_path, "metadata.json")
     
     # Read metadata.json
