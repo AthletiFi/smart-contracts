@@ -26,38 +26,47 @@ This repository contains the smart contracts for AthletiFi, developed on the Pol
    npx hardhat compile
    ```
 
-4. **Run Tests** (if available):
-   ```bash
-   npx hardhat test
-   ```
-## Deployment
+## Testing
 
-### 1. Start a Local Node
-Initiate a local Ethereum node:
-```
+1. **Initiate a local Ethereum node**
+
+```bash
 npx hardhat node
 ```
 
-### 2. Connect to Remix IDE
+2. **Run Tests**
+
+```bash
+npx hardhat test
+```
+
+## Deployment
+
+### 1. Connect to Remix IDE
 
 Establish a connection between your local file system and the Remix IDE:
+
 ```
 remixd -s . --remix-ide https://remix.ethereum.org
 ```
 
-### 3. Set Compiler Version in Remix
+### 2. Set Compiler Version in Remix
+
 - Open [Remix IDE](https://remix.ethereum.org/#lang=en&optimize=false&runs=200&evmVersion=null&version=soljson-v0.8.20+commit.a1b79de6.js) in your browser. 
 - Navigate to the "Solidity Compiler" tab.
 - Ensure the compiler version selected matches the version specified in your smart contract (e.g., `pragma solidity ^0.8.20;`).
 
-### 4. Compile the Smart Contract in Remix
+### 3. Compile the Smart Contract in Remix
+
 - Ensure the "Enable Hardhat Compilation" option is checked.
 - Click the "Compile" button.
 
 ### 5. Set Up MetaMask
+
 - Ensure MetaMask is connected and set to the correct network (e.g., Goerli testnet).
 
 ### 6. Deploy the Smart Contract in Remix
+
 - Switch to the "Deploy & Run Transactions" tab.
 - Ensure you've selected the correct network.
 - Copy your Ethereum wallet address.
@@ -65,12 +74,14 @@ remixd -s . --remix-ide https://remix.ethereum.org
 - Click the "Deploy" button.
 
 ### 7. Mint Tokens in Remix
+
 - Once the contract is deployed, navigate to the "Deployed Contracts" section.
 - Locate the `mint` function.
 - Input the desired Ethereum address where you want the token to be minted.
 - Execute the `mint` function.
 
 ### 8. Verify on OpenSea
+
 After minting, check the NFT on OpenSea's testnet to ensure the metadata, image, and other assets display correctly.
 
 ## Contributing
