@@ -1,6 +1,6 @@
 {
     "name": "Villanova Soccer Academy - Christian Hoey",
-    "description": "A digital sports trading card representing Christian Hoey from Villanova Soccer Academy. This card provides a dynamic snapshot of Christian Hoey's performance in various categories.",
+    "description": "\n    # Villanova Soccer Academy (VSA) Summer 2023 Collection \ud83c\udf1f\n\n    A digital sports trading card representing Christian Hoey from Villanova Soccer Academy. This card provides a dynamic snapshot of Anderson Rodriguez's performance in various categories.\n\n    ## About the Collection \ud83d\udcd6\n\n    Introducing the **Villanova Soccer Academy (VSA) Summer 2023 Collection** presented by **AthletiFi**! This is the inaugural Digital Player Card collection from AthletiFi, featuring players from two elite teams of VSA, capturing their dynamism and potential in the realm of soccer. With AI-assisted video recognition technology, each card dynamically updates with the player's latest performance stats, providing an engaging snapshot of their journey.\n\n    ## Why Collect? \ud83e\udd14\n\n    - \ud83d\udd0d **Discover & Follow**: Get to know the most promising young talents in soccer.\n    - \ud83c\udfae **Web3 Gaming**: These aren't just cards; use them to play as the featured players in our upcoming game!\n    - \ud83d\udc99 **Support**: Revenue-sharing model supports players, academies, and communities. By collecting, you're directly aiding player development and supporting families.\n    - \u26bd **Engagement**: Dive deep into the world of soccer, support the players you believe in, and be a part of their success story.\n\n    ## Target Audience \ud83d\udc68\u200d\ud83d\udc69\u200d\ud83d\udc67\u200d\ud83d\udc66\n\n    Perfect for Soccer fans and community members looking to get more engaged in directly supporting up and coming talent, and anyone who believes in the power of sports to change lives.\n\n    **Join us** in revolutionizing how fans engage with soccer, opening new opportunities for players, and creating a more connected and supportive soccer community!\n    ",
     "attributes": [
         {
             "trait_type": "Goalkeeping",
@@ -47,11 +47,25 @@
         },
         {
             "trait_type": "Player Number",
-            "value": 33
+            "value": "33"
+        },
+        {
+            "trait_type": "Edition",
+            "value": "3D Gold"
+        },
+        {
+            "trait_type": "Speed Boost",
+            "value": 13,
+            "display_type": "boost_number"
+        },
+        {
+            "trait_type": "Stamina Increase",
+            "value": 40,
+            "display_type": "boost_percentage"
         }
     ],
     "external_url": "https://athleti.fi/player/16",
     "edition": "3D Gold",
     "collection": "Villanova Soccer Academy - Summer 2023 Collection",
-    "animation_url": "./Christian-Hoey.mp4"
+    "animation_url": "https://scarlet-electric-boar-374.mypinata.cloud/ipfs/QmQXwASeT5wsw78ra1wff2Y8AficdA1G4FpcaicLuGVkqM/Christian-Hoey.mp4"
 }
