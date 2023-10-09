@@ -1,0 +1,71 @@
+{
+    "name": "Villanova Soccer Academy - Alesandro Cárdenas",
+    "description": "\n    Villanova Soccer Academy (VSA) Summer 2023 Collection \ud83c\udf1f\n\n    Alesandro Cárdenas from Villanova Soccer Academy. \n    This card provides a dynamic snapshot of \n    Alesandro Cárdenas's performance in various categories.\n    \n    Introducing the Villanova Soccer Academy (VSA) Summer \n    2023 Collection presented by AthletiFi! This is the \n    inaugural Digital Player Card collection from AthletiFi, \n    featuring players from two elite teams of VSA, capturing \n    their dynamism and potential in the realm of soccer. With \n    AI-assisted video recognition technology, each card \n    dynamically updates with the player's latest performance \n    stats, providing an engaging snapshot of their journey.\n    ",
+    "attributes": [
+        {
+            "trait_type": "Goalkeeping",
+            "value": 90,
+            "max_value": 100
+        },
+        {
+            "trait_type": "Skill",
+            "value": 87,
+            "max_value": 100
+        },
+        {
+            "trait_type": "Physical",
+            "value": 95,
+            "max_value": 100
+        },
+        {
+            "trait_type": "Mentality",
+            "value": 87,
+            "max_value": 100
+        },
+        {
+            "trait_type": "Defending",
+            "value": 93,
+            "max_value": 100
+        },
+        {
+            "trait_type": "Fair Play",
+            "value": 80,
+            "max_value": 100
+        },
+        {
+            "trait_type": "Overall Score",
+            "value": 89,
+            "max_value": 100
+        },
+        {
+            "trait_type": "Club",
+            "value": "Villanova Soccer Academy"
+        },
+        {
+            "trait_type": "Team",
+            "value": "2009s"
+        },
+        {
+            "trait_type": "Player Number",
+            "value": "1"
+        },
+        {
+            "trait_type": "Edition",
+            "value": "3D Gold"
+        },
+        {
+            "trait_type": "Speed Boost",
+            "value": 13,
+            "display_type": "boost_number"
+        },
+        {
+            "trait_type": "Stamina Increase",
+            "value": 15,
+            "display_type": "boost_percentage"
+        }
+    ],
+    "external_url": "https://athleti.fi/player/6",
+    "edition": "3D Gold",
+    "collection": "Villanova Soccer Academy - Summer 2023 Collection",
+    "animation_url": "https://scarlet-electric-boar-374.mypinata.cloud/ipfs/QmQXwASeT5wsw78ra1wff2Y8AficdA1G4FpcaicLuGVkqM/Alesandro-Ca%CC%81rdenas.mp4"
+}
