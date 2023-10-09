@@ -14,9 +14,18 @@ def modify_metadata(metadata, player_videos_df):
     description_template = """
     Villanova Soccer Academy (VSA) Summer 2023 Collection 🌟
 
-    [player_name] from Villanova Soccer Academy. This card provides a dynamic snapshot of [player_name]'s performance in various categories.
-
-    Introducing the Villanova Soccer Academy (VSA) Summer 2023 Collection presented by AthletiFi! This is the inaugural Digital Player Card collection from AthletiFi, featuring players from two elite teams of VSA, capturing their dynamism and potential in the realm of soccer. With AI-assisted video recognition technology, each card dynamically updates with the player's latest performance stats, providing an engaging snapshot of their journey.
+    [player_name] from Villanova Soccer Academy. 
+    This card provides a dynamic snapshot of 
+    [player_name]'s performance in various categories.
+    
+    Introducing the Villanova Soccer Academy (VSA) Summer 
+    2023 Collection presented by AthletiFi! This is the 
+    inaugural Digital Player Card collection from AthletiFi, 
+    featuring players from two elite teams of VSA, capturing 
+    their dynamism and potential in the realm of soccer. With 
+    AI-assisted video recognition technology, each card 
+    dynamically updates with the player's latest performance 
+    stats, providing an engaging snapshot of their journey.
     """
     
     metadata["description"] = description_template.replace("[player_name]", player_name)
