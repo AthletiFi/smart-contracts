@@ -9,19 +9,20 @@ import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Burnable.sol";
 import "@openzeppelin/contracts/utils/Strings.sol";
 
 /// @custom:security-contact bugs@athleti.fi
-// deployed contract address: Goerli - d
+// deployed contract address: Goerli -
 contract VSASummer23NFT is ERC721, ERC721Enumerable, ERC721Pausable, Ownable, ERC721Burnable {
     uint256 private _nextTokenId;
 
     constructor(address initialOwner)
-        ERC721("VSASummer23NFT", "VSA23")
+        ERC721("VSA Summer 23 Player Cards", "VSA23")
         Ownable(initialOwner)
     {
         _nextTokenId = 1;
     }
 
     function _baseURI() internal pure override returns (string memory) {
-        return "https://scarlet-electric-boar-374.mypinata.cloud/ipfs/QmVZnv2VdsJsncbZ4fCQn5zSTnyWZ6ZZVVpajF2Z75RK9c/";
+        return "https://scarlet-electric-boar-374.mypinata.cloud/ipfs/QmUYvxobqgEepCa77YABBYRDgzSsm37iZiZSvs7gRxW3Fd/";
+
 
     }
 

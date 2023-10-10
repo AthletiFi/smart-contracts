@@ -39,7 +39,7 @@ describe("VSASummer23NFT", function() {
       expect(tokenExists).to.equal(owner, "Token was not minted");
     
       // Check the token URI
-      const expectedTokenURI = "https://scarlet-electric-boar-374.mypinata.cloud/ipfs/Qmav4zfz2FhK4EXjGx635raMjdPtkRyKmTb4qFt6yFGZqJ/" + tokenId.toString();
+      const expectedTokenURI = "https://scarlet-electric-boar-374.mypinata.cloud/ipfs/QmVZnv2VdsJsncbZ4fCQn5zSTnyWZ6ZZVVpajF2Z75RK9c/" + tokenId.toString();
       const actualTokenURI = await nft.tokenURI(tokenId);
       expect(actualTokenURI).to.equal(expectedTokenURI);
     });
