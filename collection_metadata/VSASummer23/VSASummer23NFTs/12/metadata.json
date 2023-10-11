@@ -1,0 +1,72 @@
+{
+    "name": "Luke Lohkamp (VSA)",
+    "description": "Luke Lohkamp from Villanova Soccer Academy. They are an indispensable asset to the 2011s team. Donning the jersey number 12, they consistently play with heart, radiating the true essence of soccer.",
+    "attributes": [
+        {
+            "trait_type": "Attacking",
+            "value": 96,
+            "max_value": 100
+        },
+        {
+            "trait_type": "Skill",
+            "value": 95,
+            "max_value": 100
+        },
+        {
+            "trait_type": "Physical",
+            "value": 96,
+            "max_value": 100
+        },
+        {
+            "trait_type": "Mentality",
+            "value": 84,
+            "max_value": 100
+        },
+        {
+            "trait_type": "Defending",
+            "value": 92,
+            "max_value": 100
+        },
+        {
+            "trait_type": "Fair Play",
+            "value": 91,
+            "max_value": 100
+        },
+        {
+            "trait_type": "Overall Score",
+            "value": 92,
+            "max_value": 100
+        },
+        {
+            "trait_type": "Club",
+            "value": "Villanova Soccer Academy"
+        },
+        {
+            "trait_type": "Team",
+            "value": "2011s"
+        },
+        {
+            "trait_type": "Player Number",
+            "value": "12"
+        },
+        {
+            "trait_type": "Edition",
+            "value": "3D Gold"
+        },
+        {
+            "trait_type": "Speed Boost",
+            "value": 6,
+            "display_type": "boost_number"
+        },
+        {
+            "trait_type": "Stamina Increase",
+            "value": 10,
+            "display_type": "boost_percentage"
+        }
+    ],
+    "external_url": "https://athleti.fi/player/12",
+    "edition": "3D Gold",
+    "collection": "Villanova Soccer Academy - Summer 2023 Collection",
+    "animation_url": "https://scarlet-electric-boar-374.mypinata.cloud/ipfs/QmQXwASeT5wsw78ra1wff2Y8AficdA1G4FpcaicLuGVkqM/Luke-Lohkamp.mp4",
+    "image": "https://scarlet-electric-boar-374.mypinata.cloud/ipfs/QmW2dUnovjFydgMr5oCHTzPT3BXsrLgQpAQ4vKntXvFe1X/Luke-Lohkamp.png"
+}
