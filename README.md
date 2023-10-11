@@ -31,23 +31,45 @@ This repository contains the smart contracts for AthletiFi, developed on the Pol
 
 ## Testing
 
-1. **Start a Local Ethereum Client**:
-
-   Ensure you have a local Ethereum client like Ganache running. If you're using Ganache, make sure it's running and listening on the correct port (usually `7545` for the GUI version).
-
-2. **Migrate Contracts**:
-
-   Before running tests, deploy your contracts to the local development network:
+1. **Start Truffle's Built-in Development Blockchain**:
 
    ```bash
-   truffle migrate --reset
+   truffle develop
    ```
 
-3. **Run Tests**:
+   This command starts a local Ethereum blockchain and provides you with a set of available accounts and their private keys. It also opens a Truffle console where you can run Truffle commands directly.
+
+2. **Compile Contracts** (if you haven't already):
+
+   Inside the Truffle console:
 
    ```bash
-   truffle test
+   compile
    ```
+
+3. **Migrate Contracts**:
+
+   Deploy your contracts to the local development network:
+
+   ```bash
+   migrate --reset
+   ```
+
+4. **Run Tests**:
+
+   ```bash
+   test
+   ```
+
+5. **Exit the Truffle Console**:
+
+   To leave the Truffle console, type:
+
+   ```bash
+   .exit
+   ```
+
+Remember, when using `truffle develop`, you don't need to prefix commands with `truffle` inside the Truffle console.
 
 ## Deployment
 
