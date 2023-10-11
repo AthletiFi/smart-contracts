@@ -11,7 +11,7 @@ async function main() {
   const VSASummer23NFT = await hre.ethers.getContractFactory("VSASummer23NFT");
 
   // Address of the initial owner
-  const initialOwnerAddress = "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"; // Replace with the desired address
+  const initialOwnerAddress = "0xBa5d5EC3d0BAc295987895F1E6f0DA926E5AD43D"
 
   // Deploy the contract with the initial owner address
   const nft = await VSASummer23NFT.deploy(initialOwnerAddress);
