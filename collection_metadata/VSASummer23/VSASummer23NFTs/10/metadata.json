@@ -1,0 +1,72 @@
+{
+    "name": "Anthony Bonilla (VSA)",
+    "description": "Anthony Bonilla from Villanova Soccer Academy. Standing out, they're a core player for the 2011s side. Donning the jersey number 18, the spirit and values of the sport are manifested in every play.",
+    "attributes": [
+        {
+            "trait_type": "Goalkeeping",
+            "value": 81,
+            "max_value": 100
+        },
+        {
+            "trait_type": "Skill",
+            "value": 98,
+            "max_value": 100
+        },
+        {
+            "trait_type": "Physical",
+            "value": 85,
+            "max_value": 100
+        },
+        {
+            "trait_type": "Mentality",
+            "value": 80,
+            "max_value": 100
+        },
+        {
+            "trait_type": "Defending",
+            "value": 93,
+            "max_value": 100
+        },
+        {
+            "trait_type": "Fair Play",
+            "value": 95,
+            "max_value": 100
+        },
+        {
+            "trait_type": "Overall Score",
+            "value": 89,
+            "max_value": 100
+        },
+        {
+            "trait_type": "Club",
+            "value": "Villanova Soccer Academy"
+        },
+        {
+            "trait_type": "Team",
+            "value": "2011s"
+        },
+        {
+            "trait_type": "Player Number",
+            "value": "18"
+        },
+        {
+            "trait_type": "Edition",
+            "value": "3D Gold"
+        },
+        {
+            "trait_type": "Speed Boost",
+            "value": 3,
+            "display_type": "boost_number"
+        },
+        {
+            "trait_type": "Stamina Increase",
+            "value": 20,
+            "display_type": "boost_percentage"
+        }
+    ],
+    "external_url": "https://athleti.fi/player/10",
+    "edition": "3D Gold",
+    "collection": "Villanova Soccer Academy - Summer 2023 Collection",
+    "animation_url": "https://scarlet-electric-boar-374.mypinata.cloud/ipfs/QmQXwASeT5wsw78ra1wff2Y8AficdA1G4FpcaicLuGVkqM/Anthony-Bonilla.mp4",
+    "image": "https://scarlet-electric-boar-374.mypinata.cloud/ipfs/QmW2dUnovjFydgMr5oCHTzPT3BXsrLgQpAQ4vKntXvFe1X/Anthony-Bonilla.png"
+}
