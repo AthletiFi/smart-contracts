@@ -9,12 +9,12 @@ import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Burnable.sol";
 import "@openzeppelin/contracts/utils/Strings.sol";
 
 /// @custom:security-contact bugs@athleti.fi
-// deployed contract address: Goerli -
+// deployed contract address: Goerli - 0xf9dca77200dbecd5d7987d93327e83ef6a37e94b
 contract VSASummer23NFT is ERC721, ERC721Enumerable, ERC721Pausable, Ownable, ERC721Burnable {
     uint256 private _nextTokenId;
 
     constructor(address initialOwner)
-        ERC721("VSA Summer 23 Player Cards", "VSA23")
+        ERC721("AthletiFi Player Cards - VSA Summer '23", "VSA23")
         Ownable(initialOwner)
     {
         _nextTokenId = 1;
