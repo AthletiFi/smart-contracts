@@ -21,7 +21,7 @@ contract VSASummer23NFT is ERC721, ERC721Enumerable, ERC721Pausable, Ownable, ER
     }
 
     function _baseURI() internal pure override returns (string memory) {
-        return "https://scarlet-electric-boar-374.mypinata.cloud/ipfs/QmciNADPgAGPWXaEMb3n2af9eiKyFx9x8oB6HCgfZonZr2/";
+        return "https://scarlet-electric-boar-374.mypinata.cloud/ipfs/QmQrUMcCzXZYw3Fm12bpqPRUy6yGMexmM5JoH7xX6xRGts/";
 
     }
 
