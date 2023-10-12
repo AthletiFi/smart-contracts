@@ -122,7 +122,7 @@ Ensure you have the necessary environment variables set up. The `truffle-config.
 2. Deploy the contract to the Mumbai testnet:
 
    ```bash
-   truffle migrate --network mumbai --reset
+   truffle migrate --network mumbai
    ```
 
    After deployment, note down the contract address from the logs.
@@ -134,10 +134,16 @@ Ensure you have the necessary environment variables set up. The `truffle-config.
 2. Deploy the contract to the Polygon mainnet:
 
    ```bash
-   truffle migrate --network polygon --reset
+   truffle migrate --network polygon
    ```
 
    After deployment, note down the contract address from the logs.
+
+### Using the `--reset` Flag in Truffle Migrations
+
+The `--reset` flag in Truffle forces a redeployment of all contracts and reruns all migration scripts. It's handy when you've updated contract code or want a fresh state during development/testing. However, using it can increase gas costs, change contract addresses, and erase previous contract data. While it's common for local testing, exercise caution on mainnets or production environments.
+
+For development and testing, especially on local networks, using `--reset` is common. However, on mainnets or production environments, use `--reset` with caution.
 
 ### Interacting with the Contract
 
