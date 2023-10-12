@@ -69,6 +69,11 @@ module.exports = {
      port: 8545,            // Standard Ethereum port (default: none)
      network_id: "*",       // Any network (default: none)
     },
+    develop: { //This is for Truffle's built-in network - needed in order to connect without entering the Truffle console.
+      host: "127.0.0.1",
+      port: 9545, // Default port for Truffle's built-in blockchain
+      network_id: "*"
+    },
     polygon: {
       provider: () => new HDWalletProvider(MNEMONIC, `https://polygon-mainnet.g.alchemy.com/v2/${ALCHEMY_POLYGON_MAINNET_API_KEY}`),
       network_id: 137,

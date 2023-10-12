@@ -71,17 +71,13 @@ This repository contains the smart contracts for AthletiFi, developed on the Pol
 
 Remember, when using `truffle develop`, you don't need to prefix commands with `truffle` inside the Truffle console.
 
-**Note:** If you ever use an external Ganache or Geth instance, rather than the built-in `truffle develop` instance, you will need to run `truffle migrate --network development`, which will use the "development" configuration in `truffle-config.js`.
+**Note:** If you ever want to use an external Ganache or Geth instance for deployment while using the Truffle console, you can do so by running `migrate --network development`. This will use the "development" configuration in `truffle-config.js`.
+
+**Another Note:** If you would like to use the built-in development blockchain without entering the Truffle console, you can run `truffle develop --log`. You would then need to run truffle commands in a separate terminal window and add the `--network develop` flag to each command.
 
 ### Interactive Testing with Truffle Console
 
 After deploying your contracts, you can interact with them directly in the Truffle development console:
-
-**Enter the Truffle Console**:
-
-  ```zsh
-   truffle develop
-  ```
 
 **Interact with Your Contracts**:
 
@@ -104,7 +100,7 @@ This project is currently set up for deployment on a local development environme
 
 For Local Development instructions see section [Testing](#testing)
 
-### Deployment on Polygon
+### Prerequisites for Deployment on Polygon
 
 Ensure you have the necessary environment variables set up. The `truffle-config.js` file references several environment variables for deployment:
 
@@ -115,31 +111,27 @@ Ensure you have the necessary environment variables set up. The `truffle-config.
 
    Set these environment variables in a `.env` file or your system's environment. Remember to never commit sensitive data like mnemonics or API keys to version control.
 
+Make sure you have enough MATIC tokens in your wallet. If you're deploying on the Mumbai testnet, you can get test tokens from the [Polygon Faucet](https://faucet.polygon.technology).
+
+### Deploying the Contract
+
+Deploy the contract using the `truffle migrate` command. The `--network` flag specifies the network to deploy to:
+
 #### Polygon Mumbai Testnet
 
-1. Ensure you have some test Matic tokens in your MetaMask wallet. You can get them from the [Matic Faucet](https://faucet.matic.network/).
-
-2. Deploy the contract to the Mumbai testnet:
-
    ```bash
-   truffle migrate --network mumbai
+   truffle migrate --reset --network mumbai
    ```
 
-   After deployment, note down the contract address from the logs.
-
 #### Polygon Mainnet
-
-1. Ensure you have enough Matic tokens in your MetaMask wallet to cover gas fees.
-
-2. Deploy the contract to the Polygon mainnet:
 
    ```bash
    truffle migrate --network polygon
    ```
 
-   After deployment, note down the contract address from the logs.
+You will be prompted to enter the gas price in Gwei. After deployment, note down the contract address from the logs.
 
-### Using the `--reset` Flag in Truffle Migrations
+#### Using the `--reset` Flag in Truffle Migrations
 
 The `--reset` flag in Truffle forces a redeployment of all contracts and reruns all migration scripts. It's handy when you've updated contract code or want a fresh state during development/testing. However, using it can increase gas costs, change contract addresses, and erase previous contract data. While it's common for local testing, exercise caution on mainnets or production environments.
 
