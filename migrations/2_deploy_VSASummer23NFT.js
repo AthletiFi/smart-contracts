@@ -2,7 +2,8 @@ const readline = require('readline');
 const VSASummer23NFT = artifacts.require("VSASummer23NFT");
 
 module.exports = async function(deployer, network, accounts) {
-  const defaultAccount = "0xde3670c315cd69d81e90d3714788635aaf011860";
+  const defaultAccount = accounts[0];
+  console.log(`${defaultAccount} = 0xde3670c315cd69d81e90d3714788635aaf011860?`)
   console.log("Current network:", network);
 
   return new Promise(async (resolve, reject) => {
@@ -11,7 +12,7 @@ module.exports = async function(deployer, network, accounts) {
 
           // Local development configurations (both for truffle develop and external Ganache/Geth)
       if (network === "development" || network === "develop") {
-        initialOwnerAddress = accounts[0];
+        initialOwnerAddress = defaultAccount;
       } 
       // Polygon configurations
       else if (network === "mumbai" || network === "polygon") {
@@ -33,16 +34,20 @@ module.exports = async function(deployer, network, accounts) {
 
       console.log("Deploying with initial owner:", initialOwnerAddress);
 
-      if (network === "polygon" || network === "mumbai") {
+      if (network === "polygon" || network === "mumbai" || true) {
+        // Fetch current gas price from the network
+        const currentGasPriceInWei = await web3.eth.getGasPrice();
+        const currentGasPriceInGwei = web3.utils.fromWei(currentGasPriceInWei, 'gwei');
+   
         // Prompt for gas price if on Polygon mainnet or testnet
         const gasPrice = await new Promise((response) => {
           const gasPrompt = readline.createInterface({
             input: process.stdin,
             output: process.stdout
           });
-          gasPrompt.question('Enter the gas price in Gwei: ', (price) => {
+          gasPrompt.question(`Enter the gas price in Gwei (recommended: ${currentGasPriceInGwei} Gwei): `, (price) => {
             gasPrompt.close();
-            if (!price) throw new Error("Invalid gas price entered.");
+            if (!price || isNaN(price) || parseFloat(price) <= 0) throw new Error("Invalid gas price entered.");
             response(price);
           });
         });
