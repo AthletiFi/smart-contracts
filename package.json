@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo '.exit' | truffle develop --log && truffle compile && truffle migrate --reset && truffle test",
-    "mint-vsa": "truffle exec scripts/mint_all.js VSASummer23NFT 25 0xde3670c315cD69d81e90D3714788635aaf011860 --network mumbai"
-
+    "mint-vsa": "truffle exec scripts/mint_all.js VSASummer23NFT 25 0xde3670c315cD69d81e90D3714788635aaf011860 --network mumbai",
+    "create-mnemonic": "node scripts/createMnemonic.js",
+    "create-keys": "node scripts/generateKey.js"
   },
   "keywords": [],
   "author": "Quentin Vidal",
@@ -14,9 +15,12 @@
   "dependencies": {
     "@openzeppelin/contracts": "^5.0.0",
     "@truffle/hdwallet-provider": "^2.1.15",
+    "bip39": "^3.1.0",
     "chai": "^4.3.10",
     "dotenv": "^16.3.1",
     "ethers": "^6.8.0",
+    "fs": "^0.0.1-security",
+    "readline": "^1.3.0",
     "truffle": "^5.11.5"
   }
 }
