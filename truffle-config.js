@@ -42,7 +42,7 @@
  */
 
 require('dotenv').config();
-const { MNEMONIC, PROJECT_ID } = process.env;
+const { MNEMONIC, TEST_MNEMONIC, ALCHEMY_POLYGON_MAINNET_API_KEY, ALCHEMY_POLYGON_TESTNET_API_KEY } = process.env;
 
 const HDWalletProvider = require('@truffle/hdwallet-provider');
 
@@ -84,13 +84,28 @@ module.exports = {
       skipDryRun: true
     },
     mumbai: {
-      provider: () => new HDWalletProvider(TEST_MNEMONIC, `https://polygon-mumbai.g.alchemy.com/v2/${ALCHEMY_POLYGON_TESTNET_API_KEY}`),
+      provider: () => new HDWalletProvider({
+        mnemonic: {
+          phrase: TEST_MNEMONIC
+        },
+        providerOrUrl: `https://polygon-mumbai.g.alchemy.com/v2/${ALCHEMY_POLYGON_TESTNET_API_KEY}`,
+        numberOfAddresses: 1, 
+        shareNonce: true, 
+        derivationPath: "m/44'/60'/0'/0/",
+        pollingInterval: 8000 //8 seconds. The polling interval is the time between two consecutive checks for new blocks. The default value is 4000 milliseconds (4 seconds). By increasing this value, you can reduce the load on your node. However, if you increase it too much, you may miss new blocks. 
+      }),
+      // provider: function() {
+      //   const endpoint = `https://polygon-mumbai.g.alchemy.com/v2/${ALCHEMY_POLYGON_TESTNET_API_KEY}`;
+      //   console.log("Using RPC endpoint:", endpoint);
+      //   return new HDWalletProvider(TEST_MNEMONIC, endpoint);
+      // },
       network_id: 80001,
       gas: 5000000,
       gasPrice: 20000000000,  // 20 gwei (in wei)
       confirmations: 2,
-      timeoutBlocks: 200,
-      skipDryRun: true
+      timeoutBlocks: 400,
+      networkCheckTimeout: 1000000,
+      skipDryRun: true // skipDryRun is used by truffle to test if your contract would deploy correctly to the network. It works by deploying your contract to the network, then immediately attempting to call a function on it. If the function call fails, the deployment is considered a failure. This is useful to ensure that your contract will deploy correctly before you actually deploy it.
     },    
     //
     // An additional network, but with some advanced options…
@@ -129,14 +144,14 @@ module.exports = {
   // Configure your compilers
   compilers: {
     solc: {
-      version: "0.8.21",      // Fetch exact version from solc-bin (default: truffle's version)
+      version: "0.8.20",      // Fetch exact version from solc-bin (default: truffle's version)
       // docker: true,        // Use "0.5.1" you've installed locally with docker (default: false)
       // settings: {          // See the solidity docs for advice about optimization and evmVersion
       //  optimizer: {
       //    enabled: false,
       //    runs: 200
       //  },
-      //  evmVersion: "byzantium"
+       evmVersion: "london" //Use london to avoid the PUSH0 opcode error when deploying to Polygon
       // }
     }
   },
