@@ -119,17 +119,17 @@ Deploy the contract using the `truffle migrate` command. The `--network` flag sp
 
 #### Polygon Mumbai Testnet
 
-   ```bash
+   ```zsh
    truffle migrate --reset --network mumbai
    ```
 
 #### Polygon Mainnet
 
-   ```bash
+   ```zsh
    truffle migrate --network polygon
    ```
 
-You will be prompted to enter the gas price in Gwei. After deployment, note down the contract address from the logs.
+You will be prompted to enter the owner address as well as the gas price in Gwei. After deployment, note down the contract address from the logs.
 
 #### Using the `--reset` Flag in Truffle Migrations
 
@@ -137,13 +137,50 @@ The `--reset` flag in Truffle forces a redeployment of all contracts and reruns 
 
 For development and testing, especially on local networks, using `--reset` is common. However, on mainnets or production environments, use `--reset` with caution.
 
-### Interacting with the Contract
+## Interacting with the Contract
 
 After deploying the contract, you can retrieve the contract address from the deployment logs. This address is essential for interacting with the contract on the respective network. You can interact with the deployed contracts using tools Remix, MyEtherWallet, or programmatically using Web3.js or Ethers.js.
 
 You can verify the contract's source code on [PolygonScan](https://polygonscan.com/) ([PolygonScan Mumbai](https://mumbai.polygonscan.com/) for testnet).
 
 **Note**: If you're deploying the contract yourself, remember to note down the contract address from the deployment logs. If you're using a pre-deployed version or collaborating with others, ensure you have the correct contract address for the network you're working on.
+
+### Guide: Interacting with the VSASummer23NFT contract to mint NFTs using Truffle Console
+
+To interact with your deployed contract and mint NFTs using the Truffle console, follow these steps:
+
+1. **Start the Truffle Console**:
+   Launch the Truffle console connected to the network where you deployed your contract. For instance, if you deployed on the Mumbai testnet:
+
+   ```zsh
+   truffle console --network mumbai
+   ```
+
+2. **Get an Instance of Your Contract**:
+   Once inside the console, retrieve an instance of your deployed contract:
+
+   ```javascript
+   const contract = await VSASummer23NFT.deployed();
+   ```
+
+3. **Mint NFTs**:
+   Call the mint function of your contract. Replace `YOUR_DESIRED_ADDRESS` with the address you want to mint the NFT to, and `TOKEN_ID` with the desired token ID:
+
+   ```javascript
+   await contract.mint("YOUR_DESIRED_ADDRESS", TOKEN_ID);
+   ```
+
+   For example, to mint an NFT with token ID `1` to address `0xde3670c315cd69d81e90d3714788635aaf011860`:
+
+   ```javascript
+   await contract.mint("0xde3670c315cd69d81e90d3714788635aaf011860", 1);
+   ```
+
+4. **Exit the Console**:
+
+   ```javascript
+   .exit
+   ```
 
 ## Contributing
 
