@@ -31,7 +31,15 @@ This repository contains the smart contracts for AthletiFi, developed on the Pol
 
 ## Testing
 
-1. **Start Truffle's Built-in Development Blockchain**:
+Automated test using yarn:
+
+```zsh
+yarn test
+```
+
+### Manual Testing using Truffle's Built-in Development Blockchain and Console
+
+1. **Start Truffle Console**:
 
    ```zsh
    truffle develop
@@ -79,7 +87,7 @@ Remember, when using `truffle develop`, you don't need to prefix commands with `
 
 After deploying your contracts, you can interact with them directly in the Truffle development console:
 
-**Interact with Your Contracts**:
+#### Interact with Your Contracts
 
    For example, to get the owner of the `VSASummer23NFT` contract:
 
@@ -89,10 +97,9 @@ After deploying your contracts, you can interact with them directly in the Truff
    console.log(owner);
   ```
 
-**Exit the Truffle Development Console**:
-   Once you're done, you can exit the console by typing `.exit`.
+#### Exit the Truffle Development Console
 
-This provides a hands-on way to understand and test contract functionality.
+   Once you're done, you can exit the console by typing `.exit`.
 
 ## Deployment
 
@@ -137,7 +144,7 @@ The `--reset` flag in Truffle forces a redeployment of all contracts and reruns 
 
 For development and testing, especially on local networks, using `--reset` is common. However, on mainnets or production environments, use `--reset` with caution.
 
-## Interacting with the Contract
+### After Deployment
 
 After deploying the contract, you can retrieve the contract address from the deployment logs. This address is essential for interacting with the contract on the respective network. You can interact with the deployed contracts using tools Remix, MyEtherWallet, or programmatically using Web3.js or Ethers.js.
 
@@ -145,9 +152,12 @@ You can verify the contract's source code on [PolygonScan](https://polygonscan.c
 
 **Note**: If you're deploying the contract yourself, remember to note down the contract address from the deployment logs. If you're using a pre-deployed version or collaborating with others, ensure you have the correct contract address for the network you're working on.
 
-### Guide: Interacting with the VSASummer23NFT contract to mint NFTs using Truffle Console
+## Minting NFTs
 
-To interact with your deployed contract and mint NFTs using the Truffle console, follow these steps:
+
+There are two ways to mint NFTs. You can either mint manually by interacting with the contract to mint NFTs using Truffle Console, or you can run the `mint_all` script.
+
+### Minting manually using Truffle Console
 
 1. **Start the Truffle Console**:
    Launch the Truffle console connected to the network where you deployed your contract. For instance, if you deployed on the Mumbai testnet:
@@ -163,11 +173,17 @@ To interact with your deployed contract and mint NFTs using the Truffle console,
    const contract = await VSASummer23NFT.deployed();
    ```
 
-3. **Mint NFTs**:
-   Call the mint function of your contract. Replace `YOUR_DESIRED_ADDRESS` with the address you want to mint the NFT to, and `TOKEN_ID` with the desired token ID:
+   Or, if you are having issues and have the contract address:
 
    ```javascript
-   await contract.mint("YOUR_DESIRED_ADDRESS", TOKEN_ID);
+   const contract = await VSASummer23NFT.at("DEPLOYED_CONTRACT_ADDRESS");
+   ```
+
+3. **Mint NFTs**:
+   Call the mint function of your contract. Replace `YOUR_DESIRED_ADDRESS` with the address you want to mint the NFT to:
+
+   ```javascript
+   await contract.safeMint("YOUR_DESIRED_ADDRESS");
    ```
 
    For example, to mint an NFT with token ID `1` to address `0xde3670c315cd69d81e90d3714788635aaf011860`:
@@ -181,6 +197,20 @@ To interact with your deployed contract and mint NFTs using the Truffle console,
    ```javascript
    .exit
    ```
+
+### Minting using the `mint_all` script
+
+To mint all the NFTs in the VSASummer23NFT contract, run:
+
+```zsh
+yarn mint-vsa
+```
+
+More generally, if you're minting a different NFT contract, run:
+
+```zsh
+truffle exec scripts/mint_all.js "CONTRACT_NAME" "TOTAL_NFTS" "NETWORK" "MINTING_ADDRESS"
+```
 
 ## Contributing
 

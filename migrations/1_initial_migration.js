@@ -1,7 +1,14 @@
 /*
-* Mumbai testnet deployment: 
+* Mumbai testnet deployment (OLD): 
 *  > transaction hash:    0xe86ffe9fcecf7c0d2e262f3ab2e3cc2275041d136d41fd3eecc1c5bc25f97fd0
 *  > contract address:    0xb7f3E8BEFB36d4Eb01b2e7fd62FF30f304B942b7
+*  > account:             0xde3670c315cD69d81e90D3714788635aaf011860
+*/
+
+/*
+* Mumbai testnet deployment (NEW): 
+*  > transaction hash:    0x1a2b27d0321d1844436830d9e52079fa0500c51ef47002cc2195cfb5bfaa4535
+*  > contract address:    0xb20688A7A905908082ECA8EE89784DdcF9784504
 *  > account:             0xde3670c315cD69d81e90D3714788635aaf011860
 */
 
