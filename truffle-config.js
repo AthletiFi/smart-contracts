@@ -77,8 +77,8 @@ module.exports = {
     polygon: {
       provider: () => new HDWalletProvider(MNEMONIC, `https://polygon-mainnet.g.alchemy.com/v2/${ALCHEMY_POLYGON_MAINNET_API_KEY}`),
       network_id: 137,
-      gas: 5000000,
-      gasPrice: 20000000000,  // 20 gwei (in wei)
+      gas: 5000000, //the gas limit for the deployment transaction in wei.
+      gasPrice: 75000000000,  // 75 gwei (in wei)
       confirmations: 2,
       timeoutBlocks: 200,
       skipDryRun: true
@@ -101,7 +101,7 @@ module.exports = {
       // },
       network_id: 80001,
       gas: 5000000,
-      gasPrice: 20000000000,  // 20 gwei (in wei)
+      gasPrice: 3000000000,  // 3 gwei (in wei)
       confirmations: 2,
       timeoutBlocks: 400,
       networkCheckTimeout: 1000000,
