@@ -5,6 +5,13 @@
 *  > account:             0xde3670c315cD69d81e90D3714788635aaf011860
 */
 
+/*
+* Mumbai testnet deployment: 
+*  > transaction hash:    0xa76d4057b8624b47801a7d78da0ca021c0d77bec6a6aaed5067126c93e796e49
+*  > contract address:    0xD5274B9E5309540372e1c0Fa45db19aEE58A8961
+*  > account:             0xde3670c315cD69d81e90D3714788635aaf011860
+*/
+
 const readline = require('readline');
 const VSASummer23NFT = artifacts.require("VSASummer23NFT");
 

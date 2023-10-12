@@ -4,7 +4,9 @@
   "description": "This is where AthletiFi's smart contracts will be stored",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo '.exit' | truffle develop --log && truffle compile && truffle migrate --reset && truffle test",
+    "mint-vsa": "truffle exec scripts/mint_all.js VSASummer23NFT 25 0xde3670c315cD69d81e90D3714788635aaf011860 --network mumbai"
+
   },
   "keywords": [],
   "author": "Quentin Vidal",
