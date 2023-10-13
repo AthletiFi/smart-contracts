@@ -1,12 +1,6 @@
-/*
-* Mumbai testnet deployment (OLD): 
-*  > transaction hash:    0xe86ffe9fcecf7c0d2e262f3ab2e3cc2275041d136d41fd3eecc1c5bc25f97fd0
-*  > contract address:    0xb7f3E8BEFB36d4Eb01b2e7fd62FF30f304B942b7
-*  > account:             0xde3670c315cD69d81e90D3714788635aaf011860
-*/
 
 /*
-* Mumbai testnet deployment (NEW): 
+* Mumbai testnet deployment: 
 *  > transaction hash:    0x1a2b27d0321d1844436830d9e52079fa0500c51ef47002cc2195cfb5bfaa4535
 *  > contract address:    0xb20688A7A905908082ECA8EE89784DdcF9784504
 *  > account:             0xde3670c315cD69d81e90D3714788635aaf011860
@@ -18,7 +12,8 @@ const Migrations = artifacts.require("Migrations");
 module.exports = async function(deployer, network, accounts) {
   const defaultAccount = accounts[0];
   console.log("Current network:", network);
-
+  console.log(readline);
+  console.log("the fuckkkk");
   return new Promise(async (resolve, reject) => {
     try {
       if (network === "polygon" || network === "mumbai") {
@@ -56,3 +51,37 @@ module.exports = async function(deployer, network, accounts) {
     }
   });
 };
+
+
+// NEW CODE TO TRY: 10/12/2023
+
+// const prompt = require('prompt-sync')();
+// const Migrations = artifacts.require("Migrations");
+
+// module.exports = async function(deployer, network, accounts) {
+//   const defaultAccount = accounts[0];
+//   console.log("Current network:", network);
+
+//   try {
+//     if (network === "polygon" || network === "mumbai") {
+//       // Fetch current gas price from the network
+//       const currentGasPriceInWei = await web3.eth.getGasPrice();
+//       const currentGasPriceInGwei = web3.utils.fromWei(currentGasPriceInWei, 'gwei');
+   
+//       // Prompt for gas price if on Polygon mainnet or testnet
+//       const gasPrice = prompt(`Enter the gas price in Gwei (recommended: ${currentGasPriceInGwei} Gwei): `);
+//       if (!gasPrice || isNaN(gasPrice) || parseFloat(gasPrice) <= 0) throw new Error("Invalid gas price entered.");
+      
+//       // Convert gas price from Gwei to Wei
+//       const gasPriceInWei = web3.utils.toWei(gasPrice, 'gwei');
+
+//       console.log(`Using gas price of ${gasPriceInWei} Wei (${gasPrice} Gwei) for deployment on ${network}`);
+      
+//       await deployer.deploy(Migrations, { gasPrice: gasPriceInWei });
+//     } else {
+//       await deployer.deploy(Migrations);
+//     }
+//   } catch (error) {
+//     console.error(error.message);
+//   }
+// };

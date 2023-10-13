@@ -1,9 +1,3 @@
-/*
-* Mumbai testnet deployment: 
-*  > transaction hash:    0xd905a2b3b0db565feaca554b7e265cfa141564fbe4aab54e26b91fbd3c022e1b
-*  > contract address:    0xe772Ad75e15240c2f33196496baA75159A0b85cA
-*  > account:             0xde3670c315cD69d81e90D3714788635aaf011860
-*/
 
 /*
 * Mumbai testnet deployment: 
@@ -39,7 +33,8 @@ module.exports = async function(deployer, network, accounts) {
 
 async function performMigration(deployer, network, accounts) {
   const defaultAccount = accounts[0];
-  console.log(`${defaultAccount} = 0xde3670c315cd69d81e90d3714788635aaf011860?`)
+  console.log(`${defaultAccount} = 0xde3670c315cd69d81e90d3714788635aaf011860? (Mumbai)`)
+  console.log(`${defaultAccount} = 0xde3670c315cd69d81e90d3714788635aaf011860? (Polygon mainnet))`)
   console.log("Current network:", network);
 
   let initialOwnerAddress;
