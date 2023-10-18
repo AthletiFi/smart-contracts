@@ -1,12 +1,9 @@
 /**
  * 
- * This utility module provides functions to handle common errors that might occur during the migration process.
- * It contains a mapping of known error keywords to their respective descriptive messages, allowing for more
- * user-friendly error reporting. By centralizing the error handling logic in this module, we ensure consistent
- * error handling across different migration scripts and promote easier maintenance.
+ * This utility module provides functions that help make the migration scripts more robust and user-friendly.
  * 
  * Functions:
- * - handleKnownErrors: Checks if an error matches any of the known error keywords and logs a descriptive message.
+ * - handleKnownErrors: used to handle common errors that might occur during the migration process.
  * 
  * Usage:
  * Import the required functions from this module in the migration scripts and use them in the appropriate error handling sections.
@@ -42,7 +39,25 @@ function handleKnownErrors(error) {
   }
 }
 
+const MAX_RETRIES = 4;
+const RETRY_DELAY = 5000; // 5 seconds
+
+async function checkConnection(web3Instance) {
+    for (let i = 0; i < MAX_RETRIES; i++) {
+        try {
+            await web3Instance.eth.net.isListening();
+            console.log("Connected successfully!");
+            return;
+        } catch (error) {
+            console.error(`Connection attempt ${i + 1} failed. Retrying in ${RETRY_DELAY / 1000} seconds...`);
+            await new Promise(resolve => setTimeout(resolve, RETRY_DELAY));
+        }
+    }
+    throw new Error("Max connection retries reached. Exiting.");
+}
+
 module.exports = {
-  handleKnownErrors
+  handleKnownErrors,
+  checkConnection
 };
 

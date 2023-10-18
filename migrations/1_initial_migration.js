@@ -7,10 +7,13 @@
 */
 
 const prompt = require('prompt-sync')();
-const { handleKnownErrors } = require('./errorUtils');
+const { handleKnownErrors, checkConnection } = require('./utils');
 const Migrations = artifacts.require("Migrations");
 
 module.exports = async function(deployer, network, accounts) {
+    // Check connection before starting the migration
+    await checkConnection(web3);  // Note: pass the web3 instance to the utility function
+    
    console.log("Current network:", network);
 
   try {

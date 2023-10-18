@@ -7,31 +7,19 @@
 */
 
 const prompt = require('prompt-sync')();
-const { handleKnownErrors } = require('./errorUtils');
+const { handleKnownErrors, checkConnection } = require('./utils');
 const VSASummer23NFT = artifacts.require("VSASummer23NFT");
 
-const MAX_RETRIES = 3;
-const RETRY_DELAY = 5000; // 5 seconds
 
 module.exports = async function(deployer, network, accounts) {
-  for (let i = 0; i < MAX_RETRIES; i++) {
-    try {
-      await performMigration(deployer, network, accounts);
-      console.log("Deployment successful!");
-      break;
-    } catch (error) {
-      console.error(`Deployment failed on attempt ${i + 1}:`);
-      handleKnownErrors(error);
-
-      if (i < MAX_RETRIES - 1) {
-        console.log(`Retrying in ${RETRY_DELAY / 1000} seconds...`);
-        await new Promise(resolve => setTimeout(resolve, RETRY_DELAY));
-      } else {
-        console.error("Max retries reached. Exiting.");
-        // Exit the process with an error code to indicate a failed migration
-        process.exit(1);
-      }
-    }
+  try {
+    await checkConnection(web3);  // Ensure connection before starting the migration
+    await performMigration(deployer, network, accounts);
+    console.log("Deployment successful!");
+  } catch (error) {
+    handleKnownErrors(error);
+    // Exit the process with an error code to indicate a failed migration
+    process.exit(1);
   }
 };
 
