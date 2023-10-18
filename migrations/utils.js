@@ -4,9 +4,10 @@
  * 
  * Functions:
  * - handleKnownErrors: used to handle common errors that might occur during the migration process.
+ * - checkConnection: used to check the connection to the provider before starting the migration.
  * 
  * Usage:
- * Import the required functions from this module in the migration scripts and use them in the appropriate error handling sections.
+ * Import the required functions from this module in the migration scripts and use them as needed.
  */
 
 

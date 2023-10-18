@@ -23,6 +23,7 @@
     "ethers": "^6.8.0",
     "fs": "^0.0.1-security",
     "prompt-sync": "^4.2.0",
-    "truffle": "^5.11.5"
+    "truffle": "^5.11.5",
+    "winston": "^3.11.0"
   }
 }

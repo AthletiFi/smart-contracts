@@ -5,6 +5,7 @@
 *  > contract address:    0xb20688A7A905908082ECA8EE89784DdcF9784504
 *  > account:             0xde3670c315cD69d81e90D3714788635aaf011860
 */
+require('../globalErrorHandler');
 
 const prompt = require('prompt-sync')();
 const { handleKnownErrors, checkConnection } = require('./utils');
