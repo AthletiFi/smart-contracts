@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo '.exit' | truffle develop --log && truffle compile && truffle migrate --reset && truffle test",
     "mint-vsa": "truffle exec scripts/mint_all.js VSASummer23NFT 25 0xde3670c315cD69d81e90D3714788635aaf011860 --network mumbai",
+    "mint-vsa-main": "truffle exec scripts/mint_all.js VSASummer23NFT 25 0x0e3413c7d1aebd19d07111cb7d6d4885cc680c52 --network polygon",
     "create-mnemonic": "node scripts/createMnemonic.js",
     "create-keys": "node scripts/generateKey.js",
     "derive-address": "node scripts/deriveAddresses.js"
@@ -23,6 +24,8 @@
     "ethers": "^6.8.0",
     "fs": "^0.0.1-security",
     "prompt-sync": "^4.2.0",
+    "sol-merger": "^4.4.0",
+    "solc": "^0.8.21",
     "truffle": "^5.11.5",
     "winston": "^3.11.0"
   },
