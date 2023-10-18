@@ -5,14 +5,18 @@
   "main": "index.js",
   "scripts": {
     "test": "echo '.exit' | truffle develop --log && truffle compile && truffle migrate --reset && truffle test",
-    "mint-vsa": "truffle exec scripts/mint_all.js VSASummer23NFT 25 0xde3670c315cD69d81e90D3714788635aaf011860 --network mumbai",
     "create-mnemonic": "node scripts/createMnemonic.js",
     "create-keys": "node scripts/generateKey.js",
-    "derive-address": "node scripts/deriveAddresses.js"
+    "derive-address": "node scripts/deriveAddresses.js",
+    "verify:VSA": "truffle run verify VSASummer23NFT --network polygon",
+    "mint:VSA-main": "truffle exec scripts/mint_all.js VSASummer23NFT 25 0x0E3413C7d1aEBD19D07111Cb7D6D4885cc680c52 --network polygon",
+    "mint:VSA-test": "truffle exec scripts/mint_all.js VSASummer23NFT 25 0xde3670c315cD69d81e90D3714788635aaf011860 --network mumbai"
   },
   "keywords": [],
   "author": "Quentin Vidal",
-  "devDependencies": {},
+  "devDependencies": {
+    "truffle-plugin-verify": "^0.6.5"
+  },
   "dependencies": {
     "@openzeppelin/contracts": "^5.0.0",
     "@truffle/hdwallet-provider": "^2.1.15",
@@ -23,6 +27,8 @@
     "ethers": "^6.8.0",
     "fs": "^0.0.1-security",
     "prompt-sync": "^4.2.0",
+    "sol-merger": "^4.4.0",
+    "solc": "^0.8.21",
     "truffle": "^5.11.5",
     "winston": "^3.11.0"
   },

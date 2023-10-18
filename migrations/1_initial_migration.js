@@ -17,6 +17,7 @@ require('../globalErrorHandler');
 const prompt = require('prompt-sync')();
 const { handleKnownErrors, checkConnection } = require('./utils');
 const Migrations = artifacts.require("Migrations");
+const truffleConfig = require('../truffle-config');
 
 module.exports = async function(deployer, network, accounts) {
     // Check connection before starting the migration
@@ -28,18 +29,21 @@ module.exports = async function(deployer, network, accounts) {
     if (network === "polygon" || network === "mumbai") {
       // Fetch current gas price from the network
       const currentGasPriceInWei = await web3.eth.getGasPrice();
-      const currentGasPriceInGwei = web3.utils.fromWei(currentGasPriceInWei, 'gwei');
-  
-      // Prompt for gas price if on Polygon mainnet or testnet
-      const gasPrice = prompt(`Enter the gas price in Gwei (recommended: ${currentGasPriceInGwei} Gwei): `);
-      if (!gasPrice || isNaN(gasPrice) || parseFloat(gasPrice) <= 0) throw new Error("Invalid gas price entered.");
 
-      // Convert gas price from Gwei to Wei
-      const gasPriceInWei = web3.utils.toWei(gasPrice, 'gwei');
-
-      console.log(`Using gas price of ${gasPriceInWei} Wei (${gasPrice} Gwei) for deployment on ${network}`);
-      
-      await deployer.deploy(Migrations, { gasPrice: gasPriceInWei });
+/* This code block was commented out because the user prompts were causing network timeouts during deployment
+  *
+   *        const currentGasPriceInGwei = web3.utils.fromWei(currentGasPriceInWei, 'gwei');
+    *       // Prompt for gas price if on Polygon mainnet or testnet
+     *      // const gasPrice = prompt(`Enter the gas price in Gwei (recommended: ${currentGasPriceInGwei} Gwei): `);
+      *     // if (!gasPrice || isNaN(gasPrice) || parseFloat(gasPrice) <= 0) throw new Error("Invalid gas price entered.");
+       *    console.log(`Using gas price of ${gasPriceInWei} Wei (${gasPrice} Gwei) for deployment on ${network}`);
+        *   // Convert gas price from Gwei to Wei
+         *  const gasPriceInWei = web3.utils.toWei(gasPrice, 'gwei');
+          * // await deployer.deploy(Migrations, { gasPrice: gasPriceInWei });
+           */
+      console.log("WARNING: This deployment script is currently hardcoded with values for the Polygon mainnet. Please update the script before deploying to the Polygon testnet.");
+      console.log(`Using gas price of ${truffleConfig.networks.polygon.gasPrice} Wei (${web3.utils.toWei(truffleConfig.networks.polygon.gasPrice + '', 'gwei')} Gwei) for deployment on ${network}`);
+      await deployer.deploy(Migrations, { gasPrice: currentGasPriceInWei });
     } else {
       await deployer.deploy(Migrations);
     }

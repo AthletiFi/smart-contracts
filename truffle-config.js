@@ -42,7 +42,7 @@
  */
 
 require('dotenv').config();
-const { MNEMONIC, TEST_MNEMONIC, ALCHEMY_POLYGON_MAINNET_API_KEY, ALCHEMY_POLYGON_TESTNET_API_KEY } = process.env;
+const { MNEMONIC, TEST_MNEMONIC, ALCHEMY_POLYGON_MAINNET_API_KEY, ALCHEMY_POLYGON_TESTNET_API_KEY, POLYGONSCAN_API_KEY } = process.env;
 
 const HDWalletProvider = require('@truffle/hdwallet-provider');
 
@@ -56,7 +56,11 @@ module.exports = {
    *
    * $ truffle test --network <network-name>
    */
-
+  plugins: ['truffle-plugin-verify'], //this is to verify contracts on polygonscan or etherscan
+  api_keys: {
+    polygonscan: POLYGONSCAN_API_KEY,
+    // etherscan: 'MY_API_KEY',
+  },
   networks: {
     // Useful for testing. The `development` name is special - truffle uses it by default
     // if it's defined here and no other network is specified at the command line.
@@ -86,10 +90,10 @@ module.exports = {
         pollingInterval: 8000 //8 seconds. The polling interval is the time between two consecutive checks for new blocks. The default value is 4000 milliseconds (4 seconds). By increasing this value, you can reduce the load on your node. However, if you increase it too much, you may miss new blocks. 
       }),
       network_id: 137,
-      gas: 5000000, //the gas limit for the deployment transaction in wei.
-      gasPrice: 75000000000,  // 75 gwei (in wei)
+      gas: 9000000, //the gas limit for the deployment transaction in wei.
+      gasPrice: 99000000000,  // 99 gwei (in wei)
       confirmations: 2,
-      timeoutBlocks: 200,
+      timeoutBlocks: 300,
       skipDryRun: true
     },
     mumbai: {
@@ -155,13 +159,13 @@ module.exports = {
     solc: {
       version: "0.8.20",      // Fetch exact version from solc-bin (default: truffle's version)
       // docker: true,        // Use "0.5.1" you've installed locally with docker (default: false)
-      // settings: {          // See the solidity docs for advice about optimization and evmVersion
-      //  optimizer: {
-      //    enabled: false,
-      //    runs: 200
-      //  },
+      settings: {          // See the solidity docs for advice about optimization and evmVersion
+       optimizer: {
+         enabled: false,
+         runs: 200
+       },
        evmVersion: "london" //Use london to avoid the PUSH0 opcode error when deploying to Polygon
-      // }
+      }
     }
   },
 
