@@ -1,5 +1,4 @@
-// SPDX-License-Identifier: MIT 
-
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
 interface IERC165 {
@@ -1689,7 +1688,6 @@ abstract contract ERC721Burnable is Context, ERC721 {
  */
 
 /// @custom:security-contact bugs@athleti.fi
-// deployed contract address: Goerli - 0xf9dca77200dbecd5d7987d93327e83ef6a37e94b
 contract VSASummer23NFT is ERC721, ERC721Enumerable, ERC721Pausable, Ownable, ERC721Burnable {
     uint256 private _nextTokenId;
 

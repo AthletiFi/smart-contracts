@@ -14,7 +14,8 @@ contract VSASummer23NFT is ERC721, ERC721Enumerable, ERC721Pausable, Ownable, ER
     uint256 private _nextTokenId;
 
     constructor(address initialOwner)
-        ERC721("AthletiFi Player Cards - VSA Summer '23", "VSA23")
+        ERC721("AthletiFi Player Cards - VSA Summer 2023", "VSA23")
+        // ERC721("AthletiFi Player Cards - VSA Summer '23", "VSA23") Turns out the "'" in this name didn't render right on polygonscan. If there is ever a next time, use 2023 instead. 
         Ownable(initialOwner)
     {
         _nextTokenId = 1;

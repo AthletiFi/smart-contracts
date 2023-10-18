@@ -27,6 +27,7 @@ module.exports = async function(callback) {
                 continue; // Skip to the next iteration
             } catch (error) {
                 // If ownerOf throws an error, it means the token doesn't exist, so we can proceed with minting
+                console.log(`Token ID: ${tokenId} does not exist. Minting...`);
             }
 
             // Mint the NFT with the adjusted gas price
@@ -37,6 +38,7 @@ module.exports = async function(callback) {
             console.log(`Minted token ID: ${tokenId} with URI: ${uri}`);
 
             // Wait for 2 seconds before the next iteration because of rate limits, most likely from Alchemy but maybe Pinata.
+            console.log("Waiting 2 seconds... Patience young padawan.");
             await delay(2000);
         }
 

@@ -42,7 +42,7 @@
  */
 
 require('dotenv').config();
-const { MNEMONIC, TEST_MNEMONIC, ALCHEMY_POLYGON_MAINNET_API_KEY, ALCHEMY_POLYGON_TESTNET_API_KEY } = process.env;
+const { MNEMONIC, TEST_MNEMONIC, ALCHEMY_POLYGON_MAINNET_API_KEY, ALCHEMY_POLYGON_TESTNET_API_KEY, POLYGONSCAN_API_KEY } = process.env;
 
 const HDWalletProvider = require('@truffle/hdwallet-provider');
 
@@ -56,7 +56,11 @@ module.exports = {
    *
    * $ truffle test --network <network-name>
    */
-
+  plugins: ['truffle-plugin-verify'], //this is to verify contracts on polygonscan or etherscan
+  api_keys: {
+    polygonscan: POLYGONSCAN_API_KEY,
+    // etherscan: 'MY_API_KEY',
+  },
   networks: {
     // Useful for testing. The `development` name is special - truffle uses it by default
     // if it's defined here and no other network is specified at the command line.
