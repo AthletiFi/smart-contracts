@@ -25,5 +25,6 @@
     "prompt-sync": "^4.2.0",
     "truffle": "^5.11.5",
     "winston": "^3.11.0"
-  }
+  },
+  "license": "BSD-3-Clause"
 }

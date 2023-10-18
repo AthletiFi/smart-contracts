@@ -5,6 +5,12 @@
 *  > contract address:    0xD5274B9E5309540372e1c0Fa45db19aEE58A8961
 *  > account:             0xde3670c315cD69d81e90D3714788635aaf011860
 */
+/*
+* Polygon mainnet deployment: 
+*  > transaction hash:    0x010f54e6afc08829602d157ab5f08b961757230a0a73e4a35dcc3675e41aa82d / 0xb6b864e87617034f7fb312016920151cd4a0f626f582dab61d2282c54d7cfe4d
+*  > contract address:    0x2d729f379334e85eb03b421d0273bd9897012cd4 / 0x7d8a56f1b4a6b2bf720f4671860e4eee00fdb51c
+*  > account:             0x0e3413c7d1aebd19d07111cb7d6d4885cc680c52
+*/
 require('../globalErrorHandler');
 
 const prompt = require('prompt-sync')();
