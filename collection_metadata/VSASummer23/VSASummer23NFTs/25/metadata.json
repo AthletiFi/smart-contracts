@@ -1,40 +1,40 @@
 {
-    "name": "David Calderon (VSA)",
-    "description": "David Calderon from Villanova Soccer Academy. They are an indispensable asset to the 2011s team. Sporting the number 26, their dedication to the game is palpable.",
+    "name": "Andrew Gilmore (VSA)",
+    "description": "Andrew Gilmore from Villanova Soccer Academy. Recognized as one of the pillars of the 2011s team, with the number 2 on their back, the spirit and values of the sport are manifested in every play.",
     "attributes": [
         {
             "trait_type": "Attacking",
-            "value": 81,
+            "value": 86,
             "max_value": 100
         },
         {
             "trait_type": "Skill",
-            "value": 89,
+            "value": 93,
             "max_value": 100
         },
         {
             "trait_type": "Physical",
-            "value": 92,
+            "value": 97,
             "max_value": 100
         },
         {
             "trait_type": "Mentality",
-            "value": 94,
+            "value": 86,
             "max_value": 100
         },
         {
             "trait_type": "Defending",
-            "value": 91,
+            "value": 98,
             "max_value": 100
         },
         {
             "trait_type": "Fair Play",
-            "value": 87,
+            "value": 82,
             "max_value": 100
         },
         {
             "trait_type": "Overall Score",
-            "value": 89,
+            "value": 90,
             "max_value": 100
         },
         {
@@ -47,7 +47,7 @@
         },
         {
             "trait_type": "Player Number",
-            "value": "26"
+            "value": "2"
         },
         {
             "trait_type": "Edition",
@@ -55,18 +55,18 @@
         },
         {
             "trait_type": "Speed Boost",
-            "value": 11,
+            "value": 10,
             "display_type": "boost_number"
         },
         {
             "trait_type": "Stamina Increase",
-            "value": 35,
+            "value": 10,
             "display_type": "boost_percentage"
         }
     ],
-    "external_url": "https://athleti.fi/player/25",
+    "external_url": "https://athleti.fi/player/9",
     "edition": "3D Gold",
     "collection": "Villanova Soccer Academy - Summer 2023 Collection",
-    "animation_url": "https://scarlet-electric-boar-374.mypinata.cloud/ipfs/QmQXwASeT5wsw78ra1wff2Y8AficdA1G4FpcaicLuGVkqM/David-Calderon.mp4",
-    "image": "https://scarlet-electric-boar-374.mypinata.cloud/ipfs/QmW2dUnovjFydgMr5oCHTzPT3BXsrLgQpAQ4vKntXvFe1X/David-Calderon.png"
+    "animation_url": "https://scarlet-electric-boar-374.mypinata.cloud/ipfs/QmQXwASeT5wsw78ra1wff2Y8AficdA1G4FpcaicLuGVkqM/Andrew-Gilmore.mp4",
+    "image": "https://scarlet-electric-boar-374.mypinata.cloud/ipfs/QmW2dUnovjFydgMr5oCHTzPT3BXsrLgQpAQ4vKntXvFe1X/Andrew-Gilmore.png"
 }

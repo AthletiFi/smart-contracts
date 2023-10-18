@@ -215,3 +215,7 @@ truffle exec scripts/mint_all.js "CONTRACT_NAME" "TOTAL_NFTS" "NETWORK" "MINTING
 ## Contributing
 
 If you wish to contribute to the development of these smart contracts, please submit a pull request or open an issue to discuss the changes.
+
+## License
+
+This software is licensed under the BSD 3-Clause License. For full license details, see the [LICENSE](LICENSE) file in this repository.

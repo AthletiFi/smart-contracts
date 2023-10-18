@@ -75,7 +75,16 @@ module.exports = {
       network_id: "*"
     },
     polygon: {
-      provider: () => new HDWalletProvider(MNEMONIC, `https://polygon-mainnet.g.alchemy.com/v2/${ALCHEMY_POLYGON_MAINNET_API_KEY}`),
+      provider: () => new HDWalletProvider({
+        mnemonic: {
+          phrase: MNEMONIC
+        },
+        providerOrUrl: `https://polygon-mainnet.g.alchemy.com/v2/${ALCHEMY_POLYGON_MAINNET_API_KEY}`,
+        numberOfAddresses: 1, 
+        shareNonce: true, 
+        derivationPath: "m/44'/60'/0'/0/",
+        pollingInterval: 8000 //8 seconds. The polling interval is the time between two consecutive checks for new blocks. The default value is 4000 milliseconds (4 seconds). By increasing this value, you can reduce the load on your node. However, if you increase it too much, you may miss new blocks. 
+      }),
       network_id: 137,
       gas: 5000000, //the gas limit for the deployment transaction in wei.
       gasPrice: 75000000000,  // 75 gwei (in wei)
