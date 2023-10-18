@@ -86,10 +86,10 @@ module.exports = {
         pollingInterval: 8000 //8 seconds. The polling interval is the time between two consecutive checks for new blocks. The default value is 4000 milliseconds (4 seconds). By increasing this value, you can reduce the load on your node. However, if you increase it too much, you may miss new blocks. 
       }),
       network_id: 137,
-      gas: 5000000, //the gas limit for the deployment transaction in wei.
-      gasPrice: 75000000000,  // 75 gwei (in wei)
+      gas: 9000000, //the gas limit for the deployment transaction in wei.
+      gasPrice: 99000000000,  // 99 gwei (in wei)
       confirmations: 2,
-      timeoutBlocks: 200,
+      timeoutBlocks: 300,
       skipDryRun: true
     },
     mumbai: {
@@ -155,13 +155,13 @@ module.exports = {
     solc: {
       version: "0.8.20",      // Fetch exact version from solc-bin (default: truffle's version)
       // docker: true,        // Use "0.5.1" you've installed locally with docker (default: false)
-      // settings: {          // See the solidity docs for advice about optimization and evmVersion
-      //  optimizer: {
-      //    enabled: false,
-      //    runs: 200
-      //  },
+      settings: {          // See the solidity docs for advice about optimization and evmVersion
+       optimizer: {
+         enabled: false,
+         runs: 200
+       },
        evmVersion: "london" //Use london to avoid the PUSH0 opcode error when deploying to Polygon
-      // }
+      }
     }
   },
 
